@@ -2,7 +2,9 @@
   "name": "aj2scss",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+  	"sass": "node-sass app/styles/ -o app/styles/",
+  	"sass:watch": "npm run sass && node-sass app/styles/ -wo app/styles/",
+    "start": "tsc && concurrently \"npm run scss:watch\" \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",
@@ -33,6 +35,8 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "node-sass": "^3.10.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   }
