@@ -1,6 +1,7 @@
 {
   "name": "aj2scss",
   "version": "1.0.0",
+  "description": "Angular 2 SCSS integration",
   "scripts": {
   	"sass": "node-sass app/styles/ -o app/styles/",
   	"sass:watch": "npm run sass && node-sass app/styles/ -wo app/styles/",
